@@ -54,7 +54,7 @@ RUN mkdir -m 0777 -p /home/waazaa/.config/pip && echo "[global]" > /home/waazaa/
 
 # Copie source et rends exécutable
 COPY root/ /
-RUN chmod a+x /start/*.sh
+RUN chmod a+x /app/scripts/*.sh /app/scripts/scripts/*.sh
 
 
 CMD ["/app/scripts/startup.sh"]
