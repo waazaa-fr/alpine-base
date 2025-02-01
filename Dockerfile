@@ -2,7 +2,7 @@ FROM alpine:@@ALPINE_VERSION@@
 
 LABEL org.opencontainers.image.authors="waazaa <waazaa@waazaa.fr>"
 LABEL version="alpine-base"
-LABEL desc="Alpine Linux base image with bash instead of ash"
+LABEL desc="Alpine Linux base image with bash instead of ash and supervisor"
 
 ENV TZ=Europe/Paris
 ENV PUID=99
