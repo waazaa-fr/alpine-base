@@ -52,7 +52,7 @@ RUN touch /etc/profile.d/bash_completion.sh \
 
 RUN mkdir -m 0777 -p /home/waazaa/.config/pip && echo "[global]" > /home/waazaa/.config/pip/pip.conf && echo "break-system-packages = true" >> /home/waazaa/.config/pip/pip.conf
 
-
+# Copie source et rends exécutable
 COPY root/ /
 RUN chmod a+x /start/*.sh
 
