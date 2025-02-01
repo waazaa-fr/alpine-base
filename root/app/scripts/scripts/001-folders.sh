@@ -5,7 +5,7 @@ set -e
 ######  FOLDERS
 ######################################################################################################################################
 LOG_FOLDER=/app/logs
-if [ ! -d "$APP_FOLDER" ]; then
+if [ ! -d "$LOG_FOLDER" ]; then
     echo "Folder ${LOG_FOLDER} creation"
     mkdir -m 0777 -p $LOG_FOLDER
 fi
