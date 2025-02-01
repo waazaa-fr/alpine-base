@@ -1,18 +1,20 @@
 FROM alpine:@@ALPINE_VERSION@@
 
-LABEL org.opencontainers.image.authors="waazaa <waazaa@waazaa.fr>"
-LABEL version="alpine-base"
-LABEL desc="Alpine Linux base image with bash instead of ash and supervisor"
+LABEL org.opencontainers.image.authors  = "waazaa <waazaa@waazaa.fr>"
+LABEL version                           = "alpine-base"
+LABEL desc                              = "Alpine Linux base image with bash instead of ash and supervisor"
 
-ENV TZ=Europe/Paris
-ENV PUID=99
-ENV PGID=100
+ENV TZ      = Europe/Paris
+ENV PUID    = 99
+ENV PGID    = 100
 
 #######################################################################################################################################################################
 ##### PAQUETS UTILES
 #######################################################################################################################################################################
 RUN apk add --no-cache tzdata python3 py3-pip curl wget tree htop nano doas supervisor
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# On permet l'installation root des librairies python via pip
 RUN mkdir -m 0777 -p /root/.config/pip && echo "[global]" > /root/.config/pip/pip.conf && echo "break-system-packages = true" >> /root/.config/pip/pip.conf
 
 #######################################################################################################################################################################

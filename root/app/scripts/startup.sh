@@ -1,4 +1,4 @@
-c#!/usr/bin/env bash
+#!/usr/bin/env bash
 set -e
 
 # Récupérer les valeurs des variables d'environnement PUID et PGID
