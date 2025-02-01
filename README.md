@@ -1,6 +1,8 @@
 *alpine-base*
 
-Image Docker de base Alpine Linux.
+Docker base Alpine Linux image from official images but with supervisor and bash to replace ash as default shell.
+
+
 
 
 ```bash
